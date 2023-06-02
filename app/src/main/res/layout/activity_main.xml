@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_1"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--        Block 1-->
+        <ImageView
+            android:id="@+id/imgBlock1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/java_course"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/todo" />
+
+        <!--        Block 2-->
+        <TextView
+            android:id="@+id/nameCourse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="@string/learn_java"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgBlock1" />
+
+        <TextView
+            android:id="@+id/teacher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/teacher"
+            android:textColor="@color/white"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/nameCourse" />
+
+        <TextView
+            android:id="@+id/name_teacher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="@string/name_teacher"
+            android:textColor="@color/white"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toStartOf="@id/logoCourse"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@id/teacher"
+            app:layout_constraintTop_toBottomOf="@id/nameCourse"
+            app:layout_goneMarginEnd="16dp" />
+
+        <ImageView
+            android:id="@+id/logoCourse"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/learn_java"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgBlock1"
+            tools:ignore="ImageContrastCheck" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrierBlock2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="logoCourse, nameCourse, teacher, name_teacher" />
+
+        <!--        Block 3-->
+        <TextView
+            android:id="@+id/descCourse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="@string/description_java"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/barrierBlock2" />
+
+        <!--        Block 4-->
+        <TextView
+            android:id="@+id/otherCourse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="@string/other_course"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/descCourse" />
+
+        <TextView
+            android:id="@+id/courseAD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/teal_700"
+            android:text="@string/android_developer"
+            android:textColor="@color/white"
+            tools:ignore="TextContrastCheck"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="535dp" />
+
+        <TextView
+            android:id="@+id/courseKotlin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/teal_700"
+            android:text="@string/kotlin"
+            android:textColor="@color/white"
+            tools:ignore="TextContrastCheck"
+            tools:layout_editor_absoluteX="305dp"
+            tools:layout_editor_absoluteY="535dp" />
+
+        <TextView
+            android:id="@+id/courseFlutter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/teal_700"
+            android:text="@string/flutter"
+            android:textColor="@color/white"
+            tools:ignore="TextContrastCheck"
+            tools:layout_editor_absoluteX="349dp"
+            tools:layout_editor_absoluteY="535dp" />
+
+        <TextView
+            android:id="@+id/courseJS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/teal_700"
+            android:text="@string/javascript"
+            android:textColor="@color/white"
+            tools:ignore="TextContrastCheck"
+            tools:layout_editor_absoluteX="231dp"
+            tools:layout_editor_absoluteY="535dp" />
+
+        <TextView
+            android:id="@+id/coursePython"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/teal_700"
+            android:text="@string/python"
+            android:textColor="@color/white"
+            tools:ignore="TextContrastCheck"
+            tools:layout_editor_absoluteX="179dp"
+            tools:layout_editor_absoluteY="535dp" />
+
+        <TextView
+            android:id="@+id/courseRuby"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/teal_700"
+            android:text="@string/ruby"
+            android:textColor="@color/white"
+            tools:ignore="TextContrastCheck"
+            tools:layout_editor_absoluteX="140dp"
+            tools:layout_editor_absoluteY="535dp" />
+
+        <TextView
+            android:id="@+id/courseRuby2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/teal_700"
+            android:text="@string/ruby2"
+            android:textColor="@color/white"
+            tools:ignore="TextContrastCheck"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="563dp" />
+
+        <TextView
+            android:id="@+id/courseRuby3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/teal_700"
+            android:text="@string/ruby3"
+            android:textColor="@color/white"
+            tools:ignore="TextContrastCheck"
+            tools:layout_editor_absoluteX="55dp"
+            tools:layout_editor_absoluteY="563dp" />
+
+        <androidx.constraintlayout.helper.widget.Flow
+            android:id="@+id/block4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            app:constraint_referenced_ids="courseAD, courseRuby, coursePython, courseJS, courseKotlin, courseFlutter, courseRuby2, courseRuby3"
+            app:flow_horizontalBias="0"
+            app:flow_horizontalGap="8dp"
+            app:flow_horizontalStyle="packed"
+            app:flow_verticalGap="8dp"
+            app:flow_wrapMode="chain"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/otherCourse" />
+
+        <!--        Block 5-->
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/button_1"
+            app:layout_constraintEnd_toStartOf="@id/button2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/block4" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/button_2"
+            app:layout_constraintEnd_toStartOf="@id/button3"
+            app:layout_constraintStart_toEndOf="@id/button1"
+            app:layout_constraintTop_toBottomOf="@id/block4" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/button_3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/button2"
+            app:layout_constraintTop_toBottomOf="@id/block4" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
